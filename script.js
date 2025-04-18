@@ -23,8 +23,8 @@ fetch('twisters.json')
     : Promise.reject('Failed to load twisters.json'))
   .then(data => {
     twisters = data;
-    // Start on today's index
-    currentIndex = Math.floor(Date.now() / 86400000) % twisters.length;
+    // Start at a random index
+    currentIndex = Math.floor(Math.random() * twisters.length);
     showTwister(currentIndex);
 
     // Wire up Previous/Next
