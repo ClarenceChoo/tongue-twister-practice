@@ -1,0 +1,100 @@
+/* Reset & Layout */
+* { margin:0; padding:0; box-sizing:border-box; }
+body {
+  font-family: sans-serif;
+  line-height: 1.6;
+  transition: background 0.3s, color 0.3s;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container {
+  max-width: 600px;
+  padding: 2rem;
+  text-align: center;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+header h1 {
+  font-size: 1.75rem;
+}
+header button {
+  background: none;
+  border: 1px solid currentColor;
+  padding: 0.4rem 0.8rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+/* Main Twister Card */
+main p {
+  background: var(--card);
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+  transition: opacity 0.3s;
+}
+
+/* Navigation Buttons */
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+nav button {
+  background: none;
+  border: 1px solid currentColor;
+  padding: 0.6rem 1rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+/* Light theme variables */
+:root {
+  --bg: #f0f0f0;
+  --fg: #111;
+  --card: #fff;
+}
+
+/* Dark theme via system preference */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #111;
+    --fg: #f0f0f0;
+    --card: #222;
+  }
+}
+
+/* Manual override */
+body.dark-mode {
+  --bg: #111;
+  --fg: #f0f0f0;
+  --card: #222;
+}
+
+/* Apply vars */
+body {
+  background: var(--bg);
+  color: var(--fg);
+}
+
+
+button {
+    display: inline-block;         /* ensure it’s rendered */
+    background: none;               /* keep the transparent look */
+    color: var(--fg);               /* explicitly set the text color */
+    border: 1px solid var(--fg);    /* explicitly set the border color */
+    padding: 0.6rem 1rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+  }
+  
