@@ -37,10 +37,6 @@ fetch('twisters.json')
       showTwister(currentIndex);
     });
 
-    // Theme toggle
-    toggleBtn.addEventListener("click", () => {
-      document.body.classList.toggle("dark-mode");
-    });
   })
   .catch(err => {
     console.error(err);
